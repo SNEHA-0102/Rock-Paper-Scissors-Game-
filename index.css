@@ -1,0 +1,173 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+h1 {
+    height: 60px;
+    background-color: #2B2C28;
+    color: #FFFAFB;
+    text-align: center;
+    line-height: 60px;
+}
+
+/* Choice Section */
+.choice {
+    height: 200px;  /* Fixed size for larger screens */
+    width: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;  /* Smooth transition on hover */
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Hover effect */
+.choice:hover {
+    background-color: #2B2C28;
+    cursor: pointer;
+}
+
+/* Choices Container */
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;  /* Make choices wrap on smaller screens */
+}
+
+/* Scoreboard Section */
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;  /* Wraps scores on smaller screens */
+    margin-top: 1rem;
+}
+
+/* Score Boxes */
+.score {
+    margin-top: 10px;
+    border-radius: 30px;
+    line-height: 30px;
+    height: 90px;
+    width: 140px;
+    background-color: rgb(48, 29, 4);
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    gap: 5px;
+    max-width: 100%;
+    transition: all 0.3s ease;  /* Smooth transition on hover */
+}
+
+/* Score Numbers */
+#user-score, #comp-score {
+    font-size: 2rem;
+}
+
+/* Message Container */
+.msg-container {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+/* Message Box */
+#msg {
+    border-radius: 15px;
+    background-color: #2B2C28;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: antiquewhite;
+    display: inline-block;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    max-width: 90%;  /* Responsive width */
+    transition: background-color 0.3s ease;  /* Smooth transition on background color change */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
+    .choice {
+        height: 150px;
+        width: 150px;
+    }
+
+    img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .score {
+        height: 80px;
+        width: 120px;
+        font-size: 1.2rem;
+    }
+
+    #user-score, #comp-score {
+        font-size: 1.5rem;
+    }
+
+    #msg {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        max-width: 80%;
+    }
+}
+
+/* Mobile devices (phones) */
+@media screen and (max-width: 600px) {
+    .choice {
+        height: 120px;
+        width: 120px;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .score {
+        height: 70px;
+        width: 110px;
+        font-size: 1rem;
+    }
+
+    #user-score, #comp-score {
+        font-size: 1.2rem;
+    }
+
+    .choices {
+        gap: 1rem;
+    }
+
+    #msg {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        max-width: 90%;
+    }
+}
